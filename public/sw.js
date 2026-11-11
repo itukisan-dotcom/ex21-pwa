@@ -1,4 +1,4 @@
-const CACHE='ex21-v3';
+const CACHE='ex21-v4';
 const ROOT=new URL('./',self.location).href;
 const ASSETS=/* BUILD_ASSETS */[];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(c=>c.addAll([ROOT,ROOT+'manifest.webmanifest',ROOT+'icon-192.png',ROOT+'icon-512.png',...ASSETS.map(path=>ROOT+path)])));});
